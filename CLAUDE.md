@@ -60,8 +60,6 @@ e risposto esplicitamente con "sì", "ok", "confermo", "vai" o "procedi".
 
 ## Setup MCP / PAT (per-utente)
 
-> Guida completa su: https://dev.azure.com/beantech/beanTech%20-%20Q3I/_wiki/wikis/beanTech---Q3Intelligence.wiki/15357/Assistente-DevOps-Guide
-
 **Prerequisiti:** Node.js 20+
 
 Dopo aver installato il plugin, ogni utente configura le proprie credenziali nel `.mcp.json`:

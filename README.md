@@ -1,16 +1,16 @@
-# Q3-AI — Suite CCMI per Azure DevOps
+# azure-devops-ccmi-suite
 
-Workspace Claude Code con 7 skill per gestire Azure DevOps Boards (progetto CCMI)
+Plugin Claude Code con 7 skill per gestire Azure DevOps Boards (progetto CCMI)
 tramite linguaggio naturale in italiano o inglese.
 
-## Guida
+## Installazione
 
-Installazione, configurazione e uso sono documentati nella guida sulla wiki del progetto:
+```
+/plugin marketplace add DiegoV-code/azure-devops-ccmi-suite
+/plugin install azure-devops-ccmi-suite@ccmi-suite
+```
 
-**[Assistente DevOps — Guida](https://dev.azure.com/beantech/beanTech%20-%20Q3I/_wiki/wikis/beanTech---Q3Intelligence.wiki/15357/Assistente-DevOps-Guide)**
-
-> La wiki è la fonte di verità: fai sempre riferimento a quella per i passaggi aggiornati.
-
+Aggiornamenti futuri: `/plugin marketplace update`
 
 ## Configurazione (ogni utente usa il PROPRIO PAT)
 

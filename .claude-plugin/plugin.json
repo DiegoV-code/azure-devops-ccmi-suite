@@ -8,7 +8,6 @@
     "url": "https://github.com/DiegoV-code"
   },
   "repository": "https://github.com/DiegoV-code/azure-devops-ccmi-suite",
-  "homepage": "https://dev.azure.com/beantech/beanTech%20-%20Q3I/_wiki/wikis/beanTech---Q3Intelligence.wiki/15357/Assistente-DevOps-Guide",
   "license": "MIT",
   "keywords": ["azure-devops", "ccmi", "work-items", "sprint", "boards", "beantech"]
 }
