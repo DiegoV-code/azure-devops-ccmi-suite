@@ -1,6 +1,6 @@
 # azure-devops-ccmi-suite
 
-Plugin Claude Code con 7 skill per gestire Azure DevOps Boards (progetto CCMI)
+Plugin Claude Code con 8 skill per gestire Azure DevOps Boards (progetto CCMI)
 tramite linguaggio naturale in italiano o inglese.
 
 ## Installazione
@@ -12,7 +12,17 @@ tramite linguaggio naturale in italiano o inglese.
 
 Aggiornamenti futuri: `/plugin marketplace update`
 
-## Configurazione (ogni utente usa il PROPRIO PAT)
+## Primo avvio su Cowork
+
+Dopo aver installato il plugin, avvia la skill di setup per configurare il server MCP:
+
+```
+configura azure devops
+```
+
+La skill ti chiede organizzazione e PAT, configura il server per la sessione corrente e verifica la connessione. Va ripetuta ad ogni nuova sessione Cowork.
+
+## Configurazione su Claude Code (una tantum)
 
 Questo plugin avvia il server locale Azure DevOps MCP via `npx -y @azure-devops/mcp`
 (richiede Node.js 20+). Dopo l'installazione vanno inseriti organizzazione e PAT

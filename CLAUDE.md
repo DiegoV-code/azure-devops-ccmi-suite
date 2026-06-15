@@ -1,7 +1,7 @@
 # azure-devops-ccmi-suite — Plugin Claude Code
 
 Plugin Claude Code per gestire **Azure DevOps Boards (processo CCMI)** tramite linguaggio naturale.
-7 skill specializzate + 1 MCP server locale. Autore: Beantech.
+8 skill specializzate + 1 MCP server locale. Autore: Beantech.
 
 ---
 
@@ -40,10 +40,11 @@ azure-devops-ccmi-suite/
 
 ---
 
-## Le 7 skill
+## Le 8 skill
 
 | Skill | Trigger tipico | Scopo |
 |---|---|---|
+| `azure-devops-setup` | "configura azure devops", "collega devops", "setup" | ⚙️ Configura il server MCP per la sessione Cowork corrente |
 | `azure-devops-daily-tasks` | "crea i task di oggi", "pianifica la giornata" | Crea Task e Bug della giornata in modo interattivo |
 | `azure-devops-document-task` | "documenta il task #X", "aggiungi descrizione" | Compila/aggiorna la descrizione di un work item via template HTML |
 | `azure-devops-hierarchy-reader` | "mostra la gerarchia", "che task ho nell'epic #Y" | Navigazione read-only della gerarchia CCMI (Epic→Feature→Req→Task) |
@@ -62,7 +63,22 @@ e risposto esplicitamente con "sì", "ok", "confermo", "vai" o "procedi".
 
 **Prerequisiti:** Node.js 20+
 
-Dopo aver installato il plugin, ogni utente configura le proprie credenziali nel `.mcp.json`:
+Il metodo di configurazione dipende dall'ambiente che usi:
+
+### Su Claude Cowork Web
+
+La VM di Cowork è **effimera**: la configurazione va rifatta **ad ogni sessione**.
+Usa la skill dedicata — ti guida passo per passo:
+
+```
+configura azure devops
+```
+
+La skill chiede org + PAT, calcola la codifica, scrive il `.mcp.json` nella VM e verifica la connessione. Il PAT vive solo nella VM per la durata della sessione, poi viene cancellato.
+
+### Su Claude Code (desktop / CLI)
+
+La configurazione è **persistente** — si fa una volta sola.
 
 1. Genera un **Personal Access Token** su Azure DevOps:
    _User settings → Personal access tokens → New Token_
@@ -73,14 +89,14 @@ Dopo aver installato il plugin, ogni utente configura le proprie credenziali nel
    [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(":" + "<IL_TUO_PAT>"))
    ```
 
-3. Apri il `.mcp.json` del plugin e sostituisci i placeholder:
+3. Apri il `.mcp.json` del plugin installato e sostituisci i placeholder:
    - `YOUR_ORG_HERE` → nome dell'organizzazione Azure DevOps (es. `beantech`)
    - `YOUR_PAT_HERE` → stringa base64 ottenuta al passo 2
 
 4. Riavvia / ricollega il plugin in Claude Code.
 
 > **Non condividere mai il tuo PAT.** Non committare `.mcp.json` con valori reali.
-> Il `.gitignore` esclude già `settings.local.json`; il `.mcp.json` nel repo contiene solo placeholder.
+> Il `.mcp.json` nel repo contiene solo placeholder.
 
 ---
 
@@ -144,7 +160,7 @@ Il plugin è pubblicato come **marketplace** su GitHub. Ogni membro del team pu�
 
 ## Evoluzione futura (roadmap)
 
-- **Variabili d'ambiente per il PAT**: sostituire i placeholder in `.mcp.json` con `${ADO_ORG}`
-  e `${ADO_PAT}` — ogni utente configurerebbe le env var a livello di sistema/profilo, senza
-  mai modificare file del plugin dopo l'installazione.
+- **MCP server remoto con OAuth**: quando Microsoft abiliterà Claude come client sul server remoto
+  `https://mcp.dev.azure.com/{org}` (autenticazione Entra ID), la skill di setup non sarà più
+  necessaria su Cowork — l'autenticazione avverrà tramite OAuth senza gestione manuale del PAT.
 - **Skill `azure-devops-pr-review`**: navigazione e commento su Pull Request via MCP.

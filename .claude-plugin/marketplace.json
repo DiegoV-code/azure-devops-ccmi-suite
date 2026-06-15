@@ -9,8 +9,8 @@
     {
       "name": "azure-devops-ccmi-suite",
       "source": "./",
-      "description": "Suite CCMI per Azure DevOps Boards — 7 skill per gestire work item, sprint, ore e report via linguaggio naturale.",
-      "version": "0.3.0"
+      "description": "Suite CCMI per Azure DevOps Boards — 8 skill per gestire work item, sprint, ore, report e setup MCP via linguaggio naturale.",
+      "version": "0.4.0"
     }
   ]
 }
