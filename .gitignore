@@ -1,0 +1,13 @@
+# Credenziali e configurazione locale (MAI committare con PAT reali)
+.claude/settings.local.json
+
+# Output generati localmente dalla skill pm-report
+pm-reports/
+
+# Dipendenze Node (il MCP server è scaricato via npx -y, non serve committarlo)
+node_modules/
+
+# File di sistema
+.DS_Store
+Thumbs.db
+desktop.ini

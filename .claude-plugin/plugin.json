@@ -1,0 +1,14 @@
+{
+  "name": "azure-devops-ccmi-suite",
+  "version": "0.3.0",
+  "description": "Suite CCMI per Azure DevOps Boards — 7 skill per gestire work item, sprint, ore e report via linguaggio naturale. Server locale (@azure-devops/mcp via npx) con autenticazione PAT (Beantech).",
+  "author": {
+    "name": "Beantech",
+    "email": "diego.vianello@beantech.it",
+    "url": "https://github.com/DiegoV-code"
+  },
+  "repository": "https://github.com/DiegoV-code/azure-devops-ccmi-suite",
+  "homepage": "https://dev.azure.com/beantech/beanTech%20-%20Q3I/_wiki/wikis/beanTech---Q3Intelligence.wiki/15357/Assistente-DevOps-Guide",
+  "license": "MIT",
+  "keywords": ["azure-devops", "ccmi", "work-items", "sprint", "boards", "beantech"]
+}

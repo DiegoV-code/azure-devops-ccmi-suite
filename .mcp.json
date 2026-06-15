@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "azure-devops": {
+      "command": "npx",
+      "args": ["-y", "@azure-devops/mcp", "YOUR_ORG_HERE", "-a", "pat"],
+      "env": {
+        "PERSONAL_ACCESS_TOKEN": "YOUR_PAT_HERE"
+      }
+    }
+  }
+}

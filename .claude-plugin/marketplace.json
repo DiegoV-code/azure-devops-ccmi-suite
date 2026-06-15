@@ -1,0 +1,16 @@
+{
+  "name": "ccmi-suite",
+  "owner": {
+    "name": "Beantech",
+    "email": "diego.vianello@beantech.it"
+  },
+  "description": "Marketplace Beantech — plugin per Azure DevOps Boards (processo CCMI)",
+  "plugins": [
+    {
+      "name": "azure-devops-ccmi-suite",
+      "source": "./",
+      "description": "Suite CCMI per Azure DevOps Boards — 7 skill per gestire work item, sprint, ore e report via linguaggio naturale.",
+      "version": "0.3.0"
+    }
+  ]
+}
