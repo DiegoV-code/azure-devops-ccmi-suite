@@ -1,7 +1,7 @@
 # azure-devops-ccmi-suite — Plugin Claude Code
 
 Plugin Claude Code per gestire **Azure DevOps Boards (processo CCMI)** tramite linguaggio naturale.
-8 skill specializzate + 1 MCP server locale. Autore: Beantech.
+7 skill specializzate + 1 MCP server locale. Autore: Beantech.
 
 ---
 
@@ -49,7 +49,6 @@ azure-devops-ccmi-suite/
 | `azure-devops-document-task` | "documenta il task #X", "aggiungi descrizione" | Compila/aggiorna la descrizione di un work item via template HTML |
 | `azure-devops-hierarchy-reader` | "mostra la gerarchia", "che task ho nell'epic #Y" | Navigazione read-only della gerarchia CCMI (Epic→Feature→Req→Task) |
 | `azure-devops-log-hours` | "ho lavorato 3h sul #X", "logga le ore" | Registra ore lavorate (OriginalEstimate / CompletedWork / RemainingWork) |
-| `azure-devops-pm-report` | "genera report sprint", "voglio il report PM" | Genera report Markdown per il PM, salvato in `pm-reports/` |
 | `azure-devops-sprint-tasks` | "mostra i task dello sprint", "task aperti del team" | Vista read-only dei task aperti dello sprint corrente, per persona |
 | `azure-devops-state-transition` | "chiudi il task #X", "metti Active il #Y" | Cambia stati rispettando le transizioni valide CCMI; supporta cascata |
 

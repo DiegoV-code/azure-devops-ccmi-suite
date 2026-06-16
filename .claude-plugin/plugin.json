@@ -1,7 +1,7 @@
 {
   "name": "azure-devops-ccmi-suite",
-  "version": "0.4.0",
-  "description": "Suite CCMI per Azure DevOps Boards — 8 skill per gestire work item, sprint, ore, report e setup MCP via linguaggio naturale. Server locale (@azure-devops/mcp via npx) con autenticazione PAT (Beantech).",
+  "version": "0.4.1",
+  "description": "Suite CCMI per Azure DevOps Boards — 7 skill per gestire work item, sprint, ore e setup MCP via linguaggio naturale. Server locale (@azure-devops/mcp via npx) con autenticazione PAT (Beantech).",
   "author": {
     "name": "Beantech",
     "email": "diego.vianello@beantech.it",
